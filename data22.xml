@@ -4,20 +4,22 @@
       <author title="author">Ralls, Kim</author>
       <title>Midnight Rain</title>
       <newNodeName>Fantasy</newNodeName>
-      
       <publish_date>2000-12-16</publish_date>
-      <description>A former architect battles corporate zombies, 
-      an evil sorceress, and her own childhood to become queen 
-      of the world.</description>
+      <description>
+         A former architect battles corporate zombies, 
+         an evil sorceress, and her own childhood to become queen 
+         of the world.
+      </description>
    </book>
    <book id="bk111">
       <author title="author">O'Brien, Tim</author>
       <title>MSXML3: A Comprehensive Guide</title>
       <newNodeName>Computer</newNodeName>
-      
       <publish_date>2000-12-01</publish_date>
-      <description>The Microsoft MSXML3 parser is covered in 
-      detail, with attention to XML DOM interfaces, XSLT processing, 
-      SAX and more.</description>
+      <description>
+         The Microsoft MSXML3 parser is covered in 
+         detail, with attention to XML DOM interfaces, XSLT processing, 
+         SAX and more.
+      </description>
    </book>
 </catalog>

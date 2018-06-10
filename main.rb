@@ -74,8 +74,8 @@ else
 
 		xmlf.write;
 
-		elsif File.directory?($target)
-			Dir.glob('*/**/*.xml') do |xml_file|
+	elsif File.directory?($target)
+		Dir.glob('*/**/*.xml') do |xml_file|
 			xmlf = XMLF.new(xml_file)
 			# code goes here
 			config_file = File.open($input) { |f| Nokogiri::XML(f) }
