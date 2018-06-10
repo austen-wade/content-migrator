@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<contentMigrator>
+	<config>
+		<renameNodes>
+			<set>
+				<xpath>//genre</xpath>
+				<newName>newNodeName</newName>
+			</set>
+		</renameNodes>
+
+		<deleteNodes>
+			<set>
+				<xpath>//price</xpath>
+			</set>
+		</deleteNodes>
+
+		<replaceNodes>
+			<set>
+				<xpath>//author</xpath>
+				<newNode>
+					<div>
+						<row>
+							<col/>
+						</row>
+					</div>
+				</newNode>
+			</set>
+		</replaceNodes>
+
+		<setNodeAttributes>
+			<set>
+				<xpath>//author</xpath>
+				<attribute>title</attribute>
+				<newValue>author</newValue>
+			</set>
+		</setNodeAttributes>
+
+		<renameNodeAttributes>
+			<set>
+				<xpath>//author</xpath>
+				<attribute>author1</attribute>
+				<newAttributeName>bookwriter</newAttributeName>
+			</set>
+		</renameNodeAttributes>
+
+		<removeNodeAttributes>
+			<set>
+				<xpath>//author</xpath>
+				<attribute>bookwriter</attribute>
+			</set>
+		</removeNodeAttributes>
+	</config>
+</contentMigrator>

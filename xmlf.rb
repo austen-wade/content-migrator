@@ -1,12 +1,16 @@
 require 'Nokogiri'
 
 class XMLF
-	def initialize(file)
+	def initialize(file, output)
 		@file = file
 		@doc = File.open(file) { |f| Nokogiri::XML(f) }
+		@output = output
 	end
 
 	def set_node_attribute(node_xpath, attribute, new_value, index = nil)
+		p node_xpath
+		p attribute
+		p new_value
 		node_set = @doc.xpath(node_xpath)
 
 		if index.nil?
@@ -20,7 +24,7 @@ class XMLF
 		end
 	end
 
-	def rename_node(node_xpath, attribute, new_name, index = nil)
+	def rename_node(node_xpath, new_name, index = nil)
 		node_set = @doc.xpath(node_xpath)
 
 		if index.nil?
@@ -87,7 +91,11 @@ class XMLF
 		end
 	end
 
+	def set_output(filename)
+		@output = File.open(filename)
+	end
+
 	def write
-		File.write(@file, @doc.to_xml)
+		File.write(@output, @doc.to_xml)
 	end
 end
